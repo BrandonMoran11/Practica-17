@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charse="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <tittle></tittle>
+        <!-- Scrip del JQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> 
+    </head>
+    <body>
+        <h1>Prueba a la llamada a JQuery</h1>
+        <script>
+            $.ajax({
+                type: "POST", //se declara que los datos llegan por metodo POST
+                url: "/personJson", // la ruta del servidor
+                data:JSON.stringify({nombre:'Juan', apellido:'Parra'}), // pasamos el objeto que contiene los datos
+                dataType: 'json', //decimos que el tipo de dato es tipo Json
+                contentType: 'application/json' //tipo de contenido es Json
+
+            });
+        </script>
+    </body>
+</html>
